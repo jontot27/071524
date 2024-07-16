@@ -1,15 +1,10 @@
 import Hello from "./assets/Hello";
+import Fruits from "./assets/Fruits";
 
 function App() {
-  const person = {
-    name: "Aljon",
-    message: "Kaya mo yan!",
-    emoji: "💯",
-    birthDate: [1996, 1, 27],
-  };
   return (
     <div className="App">
-      <Hello person={person} />
+      <Fruits />
     </div>
   );
 }
