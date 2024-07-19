@@ -2,11 +2,11 @@ import Fruit from "./Fruit";
 
 export default function Fruits() {
   const fruits = [
-    { name: "Apple", price: 10, emoji: "🍎" },
-    { name: "Banana", price: 5, emoji: "🍌" },
-    { name: "Mango", price: 3, emoji: "🥭" },
-    { name: "Orange", price: 4, emoji: "🍊" },
-    { name: "Pineapple", price: 8, emoji: "🍍" },
+    { name: "Apple", price: 10, emoji: "🍎", status: true },
+    { name: "Banana", price: 5, emoji: "🍌", status: true },
+    { name: "Mango", price: 3, emoji: "🥭", status: false },
+    { name: "Orange", price: 4, emoji: "🍊", status: true },
+    { name: "Pineapple", price: 8, emoji: "🍍", status: false },
   ];
 
   return (
@@ -15,6 +15,7 @@ export default function Fruits() {
         {fruits.map((fruit) => (
           <Fruit
             key={fruit.name}
+            status={fruit.status}
             name={fruit.name}
             price={fruit.price}
             emoji={fruit.emoji}
