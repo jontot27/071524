@@ -1,6 +1,11 @@
 import { useState } from "react";
 export default function Form() {
   const [name, setName] = useState({ firstName: "", lastName: "" });
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log({ name });
+  }
+
   return (
     <div>
       <h1>
@@ -17,6 +22,7 @@ export default function Form() {
           type="text"
           value={name.lastName}
         />
+        <button onClick={(e) => handleSubmit(e)}>Submit</button>
       </form>
     </div>
   );
